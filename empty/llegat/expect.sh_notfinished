@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+
+#set login "llegat"
+#set addr "dcpomc20299639"
+#set pw "%Saabsaab7"
+#spawn ssh $login@$addr
+#expect "$login@$addr's password:"
+#send "$pw\r"
+#expect "#"
+#send {output=$(sud /usr/bin/rootsh -i -u root; lvs  )}
+#expect {
+#    password: {send "$pw\r"; exp_continue}
+#    "#"
+#}
+
+
+send_user "enter unique id: "
+expect_user -re "(.*)\n"
+set test $expect_out(1,string)
+send_user "you said $test\n"
+

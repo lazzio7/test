@@ -1,0 +1,29 @@
+#/bin/bash
+
+#run_command:  execute any command remotely
+
+
+echo "type hostname/s which you need"
+
+	read server
+
+echo "type command"
+
+	read command
+
+##functions for any command
+
+cmd ()
+{
+        for i in $server;
+		do ssh  -t $i 
+			
+			'"$command"'
+		
+		done
+	exit 0
+}
+
+cmd
+exit 0
+
