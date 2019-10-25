@@ -1,4 +1,5 @@
 #/bin/bash
+#testtogitcommit
 
 #copy ssh identity to server
 
